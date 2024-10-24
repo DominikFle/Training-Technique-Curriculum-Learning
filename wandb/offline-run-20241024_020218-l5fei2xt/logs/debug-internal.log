@@ -1,0 +1,15 @@
+{"time":"2024-10-24T02:02:18.202804089+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T02:02:18.202823938+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241024_020218-l5fei2xt/logs/debug-core.log"}
+{"time":"2024-10-24T02:02:18.503287772+02:00","level":"INFO","msg":"created new stream","id":"l5fei2xt"}
+{"time":"2024-10-24T02:02:18.503394042+02:00","level":"INFO","msg":"stream: started","id":"l5fei2xt"}
+{"time":"2024-10-24T02:02:18.503452005+02:00","level":"INFO","msg":"sender: started","stream_id":"l5fei2xt"}
+{"time":"2024-10-24T02:02:18.503399403+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"l5fei2xt"}}
+{"time":"2024-10-24T02:02:18.503490298+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"l5fei2xt"}}
+{"time":"2024-10-24T02:02:18.510205862+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T02:22:31.16555138+02:00","level":"INFO","msg":"stream: closing","id":"l5fei2xt"}
+{"time":"2024-10-24T02:22:31.165726855+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T02:22:31.17026745+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T02:22:31.172306185+02:00","level":"INFO","msg":"sender: closed","stream_id":"l5fei2xt"}
+{"time":"2024-10-24T02:22:31.172113743+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"l5fei2xt"}}
+{"time":"2024-10-24T02:22:31.172216577+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"l5fei2xt"}}
+{"time":"2024-10-24T02:22:31.172767746+02:00","level":"INFO","msg":"stream: closed","id":"l5fei2xt"}

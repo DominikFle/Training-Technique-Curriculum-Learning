@@ -1,0 +1,15 @@
+{"time":"2024-10-24T01:56:50.972986882+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T01:56:50.973020953+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241024_015650-sd2uddwa/logs/debug-core.log"}
+{"time":"2024-10-24T01:56:51.304875951+02:00","level":"INFO","msg":"created new stream","id":"sd2uddwa"}
+{"time":"2024-10-24T01:56:51.304947276+02:00","level":"INFO","msg":"stream: started","id":"sd2uddwa"}
+{"time":"2024-10-24T01:56:51.305031573+02:00","level":"INFO","msg":"sender: started","stream_id":"sd2uddwa"}
+{"time":"2024-10-24T01:56:51.304991866+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"sd2uddwa"}}
+{"time":"2024-10-24T01:56:51.305048801+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"sd2uddwa"}}
+{"time":"2024-10-24T01:56:51.309827555+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T01:56:52.286055169+02:00","level":"INFO","msg":"stream: closing","id":"sd2uddwa"}
+{"time":"2024-10-24T01:56:52.286083594+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T01:56:52.286610056+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T01:56:52.286719924+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"sd2uddwa"}}
+{"time":"2024-10-24T01:56:52.286737461+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"sd2uddwa"}}
+{"time":"2024-10-24T01:56:52.286744654+02:00","level":"INFO","msg":"sender: closed","stream_id":"sd2uddwa"}
+{"time":"2024-10-24T01:56:52.286799247+02:00","level":"INFO","msg":"stream: closed","id":"sd2uddwa"}

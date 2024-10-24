@@ -1,0 +1,15 @@
+{"time":"2024-10-24T01:53:24.534921278+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T01:53:24.534952077+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241024_015324-ymxndpd5/logs/debug-core.log"}
+{"time":"2024-10-24T01:53:24.892121475+02:00","level":"INFO","msg":"created new stream","id":"ymxndpd5"}
+{"time":"2024-10-24T01:53:24.89232971+02:00","level":"INFO","msg":"stream: started","id":"ymxndpd5"}
+{"time":"2024-10-24T01:53:24.892416563+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ymxndpd5"}}
+{"time":"2024-10-24T01:53:24.892349477+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ymxndpd5"}}
+{"time":"2024-10-24T01:53:24.892460701+02:00","level":"INFO","msg":"sender: started","stream_id":"ymxndpd5"}
+{"time":"2024-10-24T01:53:24.896483942+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T01:53:25.771385081+02:00","level":"INFO","msg":"stream: closing","id":"ymxndpd5"}
+{"time":"2024-10-24T01:53:25.771408746+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T01:53:25.771825999+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T01:53:25.77201212+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ymxndpd5"}}
+{"time":"2024-10-24T01:53:25.772030458+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ymxndpd5"}}
+{"time":"2024-10-24T01:53:25.772059627+02:00","level":"INFO","msg":"sender: closed","stream_id":"ymxndpd5"}
+{"time":"2024-10-24T01:53:25.772063939+02:00","level":"INFO","msg":"stream: closed","id":"ymxndpd5"}

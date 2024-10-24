@@ -1,0 +1,15 @@
+{"time":"2024-10-24T02:54:56.715886565+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T02:54:56.715922769+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241024_025456-yma5s7up/logs/debug-core.log"}
+{"time":"2024-10-24T02:54:57.241144558+02:00","level":"INFO","msg":"created new stream","id":"yma5s7up"}
+{"time":"2024-10-24T02:54:57.241206003+02:00","level":"INFO","msg":"stream: started","id":"yma5s7up"}
+{"time":"2024-10-24T02:54:57.241297034+02:00","level":"INFO","msg":"sender: started","stream_id":"yma5s7up"}
+{"time":"2024-10-24T02:54:57.24124075+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"yma5s7up"}}
+{"time":"2024-10-24T02:54:57.241319181+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"yma5s7up"}}
+{"time":"2024-10-24T02:54:57.247512304+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T03:03:23.916995156+02:00","level":"INFO","msg":"stream: closing","id":"yma5s7up"}
+{"time":"2024-10-24T03:03:23.917037806+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T03:03:23.918301507+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T03:03:23.918573762+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"yma5s7up"}}
+{"time":"2024-10-24T03:03:23.918625295+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"yma5s7up"}}
+{"time":"2024-10-24T03:03:23.918699513+02:00","level":"INFO","msg":"sender: closed","stream_id":"yma5s7up"}
+{"time":"2024-10-24T03:03:23.91871154+02:00","level":"INFO","msg":"stream: closed","id":"yma5s7up"}

@@ -1,0 +1,15 @@
+{"time":"2024-10-24T03:03:59.5766594+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T03:03:59.576690848+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241024_030359-ddcozpoo/logs/debug-core.log"}
+{"time":"2024-10-24T03:03:59.877649984+02:00","level":"INFO","msg":"created new stream","id":"ddcozpoo"}
+{"time":"2024-10-24T03:03:59.877697418+02:00","level":"INFO","msg":"stream: started","id":"ddcozpoo"}
+{"time":"2024-10-24T03:03:59.877803033+02:00","level":"INFO","msg":"sender: started","stream_id":"ddcozpoo"}
+{"time":"2024-10-24T03:03:59.877775711+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ddcozpoo"}}
+{"time":"2024-10-24T03:03:59.877737713+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ddcozpoo"}}
+{"time":"2024-10-24T03:03:59.882838999+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T03:11:17.420396048+02:00","level":"INFO","msg":"stream: closing","id":"ddcozpoo"}
+{"time":"2024-10-24T03:11:17.420428365+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T03:11:17.421118894+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T03:11:17.421325339+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ddcozpoo"}}
+{"time":"2024-10-24T03:11:17.421350103+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ddcozpoo"}}
+{"time":"2024-10-24T03:11:17.421393828+02:00","level":"INFO","msg":"sender: closed","stream_id":"ddcozpoo"}
+{"time":"2024-10-24T03:11:17.421414996+02:00","level":"INFO","msg":"stream: closed","id":"ddcozpoo"}

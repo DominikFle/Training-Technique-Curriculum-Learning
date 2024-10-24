@@ -1,0 +1,15 @@
+{"time":"2024-10-24T02:29:11.034397891+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-24T02:29:11.034436466+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241024_022911-q40i35on/logs/debug-core.log"}
+{"time":"2024-10-24T02:29:11.366163508+02:00","level":"INFO","msg":"created new stream","id":"q40i35on"}
+{"time":"2024-10-24T02:29:11.366217803+02:00","level":"INFO","msg":"stream: started","id":"q40i35on"}
+{"time":"2024-10-24T02:29:11.36626566+02:00","level":"INFO","msg":"sender: started","stream_id":"q40i35on"}
+{"time":"2024-10-24T02:29:11.366236955+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"q40i35on"}}
+{"time":"2024-10-24T02:29:11.366314793+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"q40i35on"}}
+{"time":"2024-10-24T02:29:11.371358775+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-24T02:51:15.514414348+02:00","level":"INFO","msg":"stream: closing","id":"q40i35on"}
+{"time":"2024-10-24T02:51:15.514521633+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-24T02:51:15.517928956+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-24T02:51:15.519473611+02:00","level":"INFO","msg":"sender: closed","stream_id":"q40i35on"}
+{"time":"2024-10-24T02:51:15.519411635+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"q40i35on"}}
+{"time":"2024-10-24T02:51:15.519290969+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"q40i35on"}}
+{"time":"2024-10-24T02:51:15.519678568+02:00","level":"INFO","msg":"stream: closed","id":"q40i35on"}
