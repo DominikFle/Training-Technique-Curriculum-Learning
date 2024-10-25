@@ -1,0 +1,15 @@
+{"time":"2024-10-25T00:48:50.321659884+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-25T00:48:50.321685912+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241025_004850-mynh31qp/logs/debug-core.log"}
+{"time":"2024-10-25T00:48:50.618833442+02:00","level":"INFO","msg":"created new stream","id":"mynh31qp"}
+{"time":"2024-10-25T00:48:50.61887879+02:00","level":"INFO","msg":"stream: started","id":"mynh31qp"}
+{"time":"2024-10-25T00:48:50.618955699+02:00","level":"INFO","msg":"sender: started","stream_id":"mynh31qp"}
+{"time":"2024-10-25T00:48:50.618959993+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"mynh31qp"}}
+{"time":"2024-10-25T00:48:50.61897385+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mynh31qp"}}
+{"time":"2024-10-25T00:48:50.623758178+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-25T00:48:51.262123159+02:00","level":"INFO","msg":"stream: closing","id":"mynh31qp"}
+{"time":"2024-10-25T00:48:51.262144223+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-25T00:48:51.262552385+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-25T00:48:51.262681801+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"mynh31qp"}}
+{"time":"2024-10-25T00:48:51.262696782+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mynh31qp"}}
+{"time":"2024-10-25T00:48:51.262748171+02:00","level":"INFO","msg":"sender: closed","stream_id":"mynh31qp"}
+{"time":"2024-10-25T00:48:51.262759237+02:00","level":"INFO","msg":"stream: closed","id":"mynh31qp"}

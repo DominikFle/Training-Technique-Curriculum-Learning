@@ -1,0 +1,1 @@
+{"train acc": 0.9375, "t-acc-0": 1, "epoch": 9, "_timestamp": 1729778437.0068867, "_runtime": 233.532909955, "_step": 3176, "loss": 0.1372113674879074, "trainer/global_step": 1879, "t-acc-1": 1, "val acc_step": 0.5, "val-acc-0_step": 0, "val-acc-1_step": 1, "val-acc-1_epoch": NaN, "val acc_epoch": 0.555400013923645, "val-acc-0_epoch": NaN}

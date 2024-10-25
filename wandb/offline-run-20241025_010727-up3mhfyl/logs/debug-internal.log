@@ -1,0 +1,15 @@
+{"time":"2024-10-25T01:07:27.624184729+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-25T01:07:27.624200772+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241025_010727-up3mhfyl/logs/debug-core.log"}
+{"time":"2024-10-25T01:07:27.908516407+02:00","level":"INFO","msg":"created new stream","id":"up3mhfyl"}
+{"time":"2024-10-25T01:07:27.908556291+02:00","level":"INFO","msg":"stream: started","id":"up3mhfyl"}
+{"time":"2024-10-25T01:07:27.908596375+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"up3mhfyl"}}
+{"time":"2024-10-25T01:07:27.908627014+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"up3mhfyl"}}
+{"time":"2024-10-25T01:07:27.908666419+02:00","level":"INFO","msg":"sender: started","stream_id":"up3mhfyl"}
+{"time":"2024-10-25T01:07:27.913014697+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-25T01:07:28.382617055+02:00","level":"INFO","msg":"stream: closing","id":"up3mhfyl"}
+{"time":"2024-10-25T01:07:28.382653511+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-25T01:07:28.383162901+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-25T01:07:28.383284103+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"up3mhfyl"}}
+{"time":"2024-10-25T01:07:28.383298861+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"up3mhfyl"}}
+{"time":"2024-10-25T01:07:28.38330285+02:00","level":"INFO","msg":"sender: closed","stream_id":"up3mhfyl"}
+{"time":"2024-10-25T01:07:28.383377885+02:00","level":"INFO","msg":"stream: closed","id":"up3mhfyl"}

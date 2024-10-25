@@ -1,0 +1,18 @@
+  | Name                        | Type             | Params | Mode
+-------------------------------------------------------------------------
+0 | layers                      | ModuleList       | 345 K  | train
+1 | flatten                     | Flatten          | 0      | train
+2 | project_into_classification | Linear           | 62.7 K | train
+3 | softmax                     | Softmax          | 0      | train
+4 | loss_criterion              | CrossEntropyLoss | 0      | train
+-------------------------------------------------------------------------
+408 K     Trainable params
+0         Non-trainable params
+408 K     Total params
+1.635     Total estimated model params size (MB)
+29        Modules in train mode
+0         Modules in eval mode
+Epoch 5: 100%|███| 188/188 [00:25<00:00,  7.40it/s, v_num=caye, loss=0.0555, train acc=1.000, val acc_step=0.500, val acc_epoch=0.386]
+
+Validation DataLoader 0:  18%|████████████▍                                                          | 55/313 [00:03<00:15, 16.33it/s]
+`Trainer.fit` stopped: `max_epochs=10` reached.

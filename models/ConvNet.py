@@ -5,6 +5,8 @@ import torch.nn as nn
 import math
 import torch
 
+from metrics.accuracy import accuracy_from_out_probabilities
+
 
 class ResBlock(nn.Module):
     def __init__(
@@ -58,11 +60,13 @@ class ConvNet(pl.LightningModule):
         model_channels=[(1, 64), (64, 64), (64, 128)],
         strides=[1, 2, 2],
         learning_rate=0.01,
+        weight_decay=0.01,
     ):
         super().__init__()
         self.save_hyperparameters()
         self.num_classes = num_classes
         self.learning_rate = learning_rate
+        self.weight_decay = weight_decay
         self.layers = nn.ModuleList([])
         self.total_stride = 1
         for stride, (in_c, out_c) in zip(strides, model_channels):
@@ -85,6 +89,12 @@ class ConvNet(pl.LightningModule):
         )
         self.softmax = nn.Softmax(-1)
         self.loss_criterion = nn.CrossEntropyLoss()
+        self.acc_prev = {
+            "train-acc-0": 0,
+            "train-acc-1": 0,
+            "val-acc-0": 0,
+            "val-acc-1": 0,
+        }
 
     def forward(self, x, with_softmax=False):
         for layer in self.layers:
@@ -100,29 +110,41 @@ class ConvNet(pl.LightningModule):
         loss = self.loss_criterion(output, targets)
         return loss
 
+    def log_acc(self, accuracy, out=[], prefix="train"):
+        self.log(f"{prefix}-acc", accuracy, on_step=True, prog_bar=True, logger=True)
+        if len(out) > 0:
+            # log individual accuracies
+            for i, acc_i in enumerate(out):
+                acc_i = (
+                    self.acc_prev[f"{prefix}-acc-{i}"] if torch.isnan(acc_i) else acc_i
+                )
+                self.acc_prev[f"{prefix}-acc-{i}"] = acc_i
+                self.log(
+                    f"{prefix}-acc-{i}", acc_i, on_step=True, prog_bar=True, logger=True
+                )
+
     def training_step(self, batch, batch_idx):
         inputs, targets = batch
         loss = self.get_loss(inputs, targets)
         out = self(inputs, with_softmax=True)  # out --> Bx10
-        out_sharp = torch.argmax(out, -1).long()
-        targets = targets.long()  # target --> Bx10
-        accuracy = torch.sum(out_sharp == targets) / targets.shape[0]
+        accuracy, out = accuracy_from_out_probabilities(
+            out, targets, individual_classes=[0, 1]
+        )
         self.log("loss", loss, on_step=True, prog_bar=True, logger=True)
-        self.log("train acc", accuracy, on_step=True, prog_bar=True, logger=True)
+        self.log_acc(accuracy, out=out, prefix="train")
         return loss
 
     def validation_step(self, batch, batch_idx):
         inputs, targets = batch  # target --> Bx1
         targets = targets.long()  # target --> Bx10
         out = self(inputs, with_softmax=True)  # out --> Bx10
-        out_sharp = torch.argmax(out, -1).long()
-        accuracy = torch.sum(out_sharp == targets) / targets.shape[0]
-        # accuracy = (
-        #     torch.trace(torch.matmul(target_hot, torch.transpose(out_sharp, 0, 1)))
-        #     / target_hot.shape[0]
-        # )  # correct pred / batchsize
-        self.log("val acc", accuracy, on_step=True, prog_bar=True, logger=True)
+        accuracy, out = accuracy_from_out_probabilities(
+            out, targets, individual_classes=[1, 2]
+        )
+        self.log_acc(accuracy, out=out, prefix="val")
         return self.get_loss(inputs, targets)
 
     def configure_optimizers(self):
-        return torch.optim.AdamW(self.parameters(), lr=self.learning_rate)
+        return torch.optim.AdamW(
+            self.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay
+        )

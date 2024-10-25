@@ -1,0 +1,31 @@
+{
+  "os":  "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python":  "3.12.5",
+  "startedAt":  "2024-10-24T12:44:34.105910Z",
+  "program":  "/home/domi/ml-training-technique/training/tr_baseline.py",
+  "codePath":  "training/tr_baseline.py",
+  "git":  {
+    "remote":  "https://github.com/DominikFle/Ml-Training-Technique.git",
+    "commit":  "7100c8dd151f2fe2e89390780e171e320cf1e8bf"
+  },
+  "root":  ".",
+  "host":  "DESKTOP-1KUR5TD",
+  "username":  "domi",
+  "executable":  "/home/domi/miniconda3/envs/ml_technique/bin/python",
+  "codePathLocal":  "training/tr_baseline.py",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "1081101176832",
+      "used":  "40494288896"
+    }
+  },
+  "memory":  {
+    "total":  "8174731264"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

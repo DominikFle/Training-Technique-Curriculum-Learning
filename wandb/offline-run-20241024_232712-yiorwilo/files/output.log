@@ -1,0 +1,19 @@
+  | Name                        | Type             | Params | Mode
+-------------------------------------------------------------------------
+0 | layers                      | ModuleList       | 67.4 K | train
+1 | flatten                     | Flatten          | 0      | train
+2 | project_into_classification | Linear           | 125 K  | train
+3 | softmax                     | Softmax          | 0      | train
+4 | loss_criterion              | CrossEntropyLoss | 0      | train
+-------------------------------------------------------------------------
+192 K     Trainable params
+0         Non-trainable params
+192 K     Total params
+0.771     Total estimated model params size (MB)
+21        Modules in train mode
+0         Modules in eval mode
+Epoch 3: 100%|█| 188/188 [00:13<00:00, 14.34it/s, v_num=wilo, loss=0.0646, train-acc=1.000, train-acc-0=1.000, val-acc_step=0.188, val
+
+Validation DataLoader 0:  20%|██████████████                                                         | 62/313 [00:01<00:07, 33.38it/s]
+
+Epoch 9: 100%|█| 188/188 [00:22<00:00,  8.54it/s, v_num=wilo, loss=0.00191, train-acc=1.000, train-acc-0=1.000, val-acc_step=0.688, va

@@ -1,0 +1,15 @@
+{"time":"2024-10-25T01:06:26.252465406+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-25T01:06:26.252486415+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241025_010626-ip2oi18l/logs/debug-core.log"}
+{"time":"2024-10-25T01:06:26.487875188+02:00","level":"INFO","msg":"created new stream","id":"ip2oi18l"}
+{"time":"2024-10-25T01:06:26.487930693+02:00","level":"INFO","msg":"stream: started","id":"ip2oi18l"}
+{"time":"2024-10-25T01:06:26.488045679+02:00","level":"INFO","msg":"sender: started","stream_id":"ip2oi18l"}
+{"time":"2024-10-25T01:06:26.488040722+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ip2oi18l"}}
+{"time":"2024-10-25T01:06:26.488016046+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ip2oi18l"}}
+{"time":"2024-10-25T01:06:26.492051794+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-25T01:06:26.941052024+02:00","level":"INFO","msg":"stream: closing","id":"ip2oi18l"}
+{"time":"2024-10-25T01:06:26.941073844+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-25T01:06:26.941527309+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-25T01:06:26.941671639+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ip2oi18l"}}
+{"time":"2024-10-25T01:06:26.94168404+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ip2oi18l"}}
+{"time":"2024-10-25T01:06:26.941718357+02:00","level":"INFO","msg":"sender: closed","stream_id":"ip2oi18l"}
+{"time":"2024-10-25T01:06:26.941736984+02:00","level":"INFO","msg":"stream: closed","id":"ip2oi18l"}

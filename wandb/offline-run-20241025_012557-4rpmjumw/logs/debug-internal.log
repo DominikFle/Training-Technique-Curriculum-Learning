@@ -1,0 +1,15 @@
+{"time":"2024-10-25T01:25:57.739312768+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-25T01:25:57.739333859+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241025_012557-4rpmjumw/logs/debug-core.log"}
+{"time":"2024-10-25T01:25:58.026725044+02:00","level":"INFO","msg":"created new stream","id":"4rpmjumw"}
+{"time":"2024-10-25T01:25:58.026766235+02:00","level":"INFO","msg":"stream: started","id":"4rpmjumw"}
+{"time":"2024-10-25T01:25:58.026844963+02:00","level":"INFO","msg":"sender: started","stream_id":"4rpmjumw"}
+{"time":"2024-10-25T01:25:58.026821578+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"4rpmjumw"}}
+{"time":"2024-10-25T01:25:58.026844343+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"4rpmjumw"}}
+{"time":"2024-10-25T01:25:58.031127647+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-25T01:25:58.422642776+02:00","level":"INFO","msg":"stream: closing","id":"4rpmjumw"}
+{"time":"2024-10-25T01:25:58.422668368+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-25T01:25:58.423298029+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-25T01:25:58.423453275+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"4rpmjumw"}}
+{"time":"2024-10-25T01:25:58.423482283+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"4rpmjumw"}}
+{"time":"2024-10-25T01:25:58.423537031+02:00","level":"INFO","msg":"sender: closed","stream_id":"4rpmjumw"}
+{"time":"2024-10-25T01:25:58.42356167+02:00","level":"INFO","msg":"stream: closed","id":"4rpmjumw"}

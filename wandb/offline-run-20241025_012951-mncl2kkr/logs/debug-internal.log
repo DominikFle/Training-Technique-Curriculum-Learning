@@ -1,0 +1,15 @@
+{"time":"2024-10-25T01:29:51.357289255+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-25T01:29:51.357307859+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241025_012951-mncl2kkr/logs/debug-core.log"}
+{"time":"2024-10-25T01:29:51.623066163+02:00","level":"INFO","msg":"created new stream","id":"mncl2kkr"}
+{"time":"2024-10-25T01:29:51.623163504+02:00","level":"INFO","msg":"stream: started","id":"mncl2kkr"}
+{"time":"2024-10-25T01:29:51.623241956+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mncl2kkr"}}
+{"time":"2024-10-25T01:29:51.623315356+02:00","level":"INFO","msg":"sender: started","stream_id":"mncl2kkr"}
+{"time":"2024-10-25T01:29:51.623267546+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"mncl2kkr"}}
+{"time":"2024-10-25T01:29:51.627739871+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-25T01:33:47.717119762+02:00","level":"INFO","msg":"stream: closing","id":"mncl2kkr"}
+{"time":"2024-10-25T01:33:47.717151793+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-25T01:33:47.717791308+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-25T01:33:47.718036302+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"mncl2kkr"}}
+{"time":"2024-10-25T01:33:47.718069331+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mncl2kkr"}}
+{"time":"2024-10-25T01:33:47.718101766+02:00","level":"INFO","msg":"sender: closed","stream_id":"mncl2kkr"}
+{"time":"2024-10-25T01:33:47.718137804+02:00","level":"INFO","msg":"stream: closed","id":"mncl2kkr"}

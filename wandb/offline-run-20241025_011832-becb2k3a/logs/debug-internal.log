@@ -1,0 +1,15 @@
+{"time":"2024-10-25T01:18:32.662260534+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-25T01:18:32.66227712+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241025_011832-becb2k3a/logs/debug-core.log"}
+{"time":"2024-10-25T01:18:32.926036522+02:00","level":"INFO","msg":"created new stream","id":"becb2k3a"}
+{"time":"2024-10-25T01:18:32.926082038+02:00","level":"INFO","msg":"stream: started","id":"becb2k3a"}
+{"time":"2024-10-25T01:18:32.926133366+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"becb2k3a"}}
+{"time":"2024-10-25T01:18:32.926189251+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"becb2k3a"}}
+{"time":"2024-10-25T01:18:32.926199871+02:00","level":"INFO","msg":"sender: started","stream_id":"becb2k3a"}
+{"time":"2024-10-25T01:18:32.930386136+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-25T01:18:33.292873401+02:00","level":"INFO","msg":"stream: closing","id":"becb2k3a"}
+{"time":"2024-10-25T01:18:33.292899998+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-25T01:18:33.293424419+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-25T01:18:33.293585216+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"becb2k3a"}}
+{"time":"2024-10-25T01:18:33.29359985+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"becb2k3a"}}
+{"time":"2024-10-25T01:18:33.293630291+02:00","level":"INFO","msg":"sender: closed","stream_id":"becb2k3a"}
+{"time":"2024-10-25T01:18:33.293665956+02:00","level":"INFO","msg":"stream: closed","id":"becb2k3a"}
