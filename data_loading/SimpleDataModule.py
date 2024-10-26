@@ -9,11 +9,9 @@ import numpy as np
 
 from data.MNIST_Info import MNIST_INFO
 
-file = "/home/domi/ml-training-technique/data/train-labels.idx1-ubyte"
-
 
 class SimpleMnistDataset(Dataset):
-    def __init__(self, stage="training", percent_of_dataset=1.0):
+    def __init__(self, stage="training", percent_of_dataset=1.0, labels=None):
         self.percent_of_dataset = percent_of_dataset
         if stage == "training":
             file_imgs = MNIST_INFO.train_imgs_path
@@ -23,7 +21,9 @@ class SimpleMnistDataset(Dataset):
             file_labels = MNIST_INFO.val_labels_path
         self.stage = stage
         self.images = idx2numpy.convert_from_file(file_imgs) / 255.0
-        self.labels = idx2numpy.convert_from_file(file_labels)
+        self.labels = (
+            idx2numpy.convert_from_file(file_labels) if labels is None else labels
+        )
 
     def __len__(self):
         return int(len(self.images) * self.percent_of_dataset)
@@ -31,8 +31,24 @@ class SimpleMnistDataset(Dataset):
     def __getitem__(self, index):
         feature = torch.tensor(self.images[index]).unsqueeze(0)
         label = torch.tensor(self.labels[index])
+        assert (
+            label >= 0
+        ), f"Label below 0 indicates false dataloading. Label was {label}"
         # if label == 0 and self.stage == "training":
         #     raise ValueError("label is zero")
+        return (feature.float(), label)
+
+
+class UnsupervisedMnistDataset(Dataset):
+    def __init__(self, images):
+        self.images = images / 255
+
+    def __len__(self):
+        return len(self.images)
+
+    def __getitem__(self, index):
+        feature = torch.tensor(self.images[index]).unsqueeze(0)
+        label = torch.tensor(-1)
         return (feature.float(), label)
 
 
