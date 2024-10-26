@@ -1,0 +1,15 @@
+{"time":"2024-10-26T16:22:08.757519446+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-26T16:22:08.757585638+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241026_162208-wl2acl2p/logs/debug-core.log"}
+{"time":"2024-10-26T16:22:09.546260471+02:00","level":"INFO","msg":"created new stream","id":"wl2acl2p"}
+{"time":"2024-10-26T16:22:09.546583887+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wl2acl2p"}}
+{"time":"2024-10-26T16:22:09.546679768+02:00","level":"INFO","msg":"sender: started","stream_id":"wl2acl2p"}
+{"time":"2024-10-26T16:22:09.5466871+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wl2acl2p"}}
+{"time":"2024-10-26T16:22:09.546544814+02:00","level":"INFO","msg":"stream: started","id":"wl2acl2p"}
+{"time":"2024-10-26T16:22:09.552185885+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-26T16:22:10.426259929+02:00","level":"INFO","msg":"stream: closing","id":"wl2acl2p"}
+{"time":"2024-10-26T16:22:10.426315183+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-26T16:22:10.427070752+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-26T16:22:10.42729788+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wl2acl2p"}}
+{"time":"2024-10-26T16:22:10.427327781+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wl2acl2p"}}
+{"time":"2024-10-26T16:22:10.427343592+02:00","level":"INFO","msg":"sender: closed","stream_id":"wl2acl2p"}
+{"time":"2024-10-26T16:22:10.427406131+02:00","level":"INFO","msg":"stream: closed","id":"wl2acl2p"}

@@ -1,0 +1,15 @@
+{"time":"2024-10-26T16:36:26.804612668+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-26T16:36:26.804636558+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241026_163626-v8ztar4c/logs/debug-core.log"}
+{"time":"2024-10-26T16:36:27.091021158+02:00","level":"INFO","msg":"created new stream","id":"v8ztar4c"}
+{"time":"2024-10-26T16:36:27.091065527+02:00","level":"INFO","msg":"stream: started","id":"v8ztar4c"}
+{"time":"2024-10-26T16:36:27.091105136+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"v8ztar4c"}}
+{"time":"2024-10-26T16:36:27.091172248+02:00","level":"INFO","msg":"sender: started","stream_id":"v8ztar4c"}
+{"time":"2024-10-26T16:36:27.091145498+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"v8ztar4c"}}
+{"time":"2024-10-26T16:36:27.096330708+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-26T16:37:39.106377468+02:00","level":"INFO","msg":"stream: closing","id":"v8ztar4c"}
+{"time":"2024-10-26T16:37:39.106400683+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-26T16:37:39.106967808+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-26T16:37:39.107088414+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"v8ztar4c"}}
+{"time":"2024-10-26T16:37:39.107102413+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"v8ztar4c"}}
+{"time":"2024-10-26T16:37:39.107106579+02:00","level":"INFO","msg":"sender: closed","stream_id":"v8ztar4c"}
+{"time":"2024-10-26T16:37:39.107157878+02:00","level":"INFO","msg":"stream: closed","id":"v8ztar4c"}

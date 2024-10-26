@@ -6,6 +6,7 @@ import math
 import torch
 
 from metrics.accuracy import accuracy_from_out_probabilities
+from models.DynamicDropout import DynamicDropout
 
 
 class ResBlock(nn.Module):
@@ -61,15 +62,22 @@ class ConvNet(pl.LightningModule):
         strides=[1, 2, 2],
         learning_rate=0.01,
         weight_decay=0.01,
+        dropout_schedule=None,
     ):
         super().__init__()
         self.save_hyperparameters()
         self.num_classes = num_classes
         self.learning_rate = learning_rate
         self.weight_decay = weight_decay
+        self.dropout_schedule = dropout_schedule
+        self.dropout_p_mem = {
+            # name: [p] --> to adjust the p dynamically
+        }
         self.layers = nn.ModuleList([])
         self.total_stride = 1
-        for stride, (in_c, out_c) in zip(strides, model_channels):
+        for i, stride, (in_c, out_c) in zip(
+            range(len(strides)), strides, model_channels
+        ):
             self.layers.append(
                 ResBlock(
                     channels_in=in_c,
@@ -78,6 +86,10 @@ class ConvNet(pl.LightningModule):
                 )
             )
             self.total_stride *= stride
+            self.dropout_p_mem[i] = [0]  # init dropout_with zero
+            self.layers.append(
+                DynamicDropout(p_storage=self.dropout_p_mem[i], dropout_dim="2d")
+            )
         self.flatten = (
             nn.Flatten()
         )  # after that one has prod(input_size)*channels_out/total_stride
@@ -110,7 +122,14 @@ class ConvNet(pl.LightningModule):
         loss = self.loss_criterion(output, targets)
         return loss
 
-    def log_acc(self, accuracy, out=[], prefix="train"):
+    def on_train_epoch_start(self):
+        curr_epoch = self.current_epoch
+        if self.dropout_schedule:
+            self.dropout_p = self.dropout_schedule(
+                epoch=curr_epoch, dropout_mem=self.dropout_p_mem
+            )
+
+    def log_acc(self, accuracy, out=[], prefix="train", on_step=True):
         self.log(f"{prefix}-acc", accuracy, on_step=True, prog_bar=True, logger=True)
         if len(out) > 0:
             # log individual accuracies
@@ -120,7 +139,12 @@ class ConvNet(pl.LightningModule):
                 )
                 self.acc_prev[f"{prefix}-acc-{i}"] = acc_i
                 self.log(
-                    f"{prefix}-acc-{i}", acc_i, on_step=True, prog_bar=True, logger=True
+                    f"{prefix}-acc-{i}",
+                    acc_i,
+                    on_step=on_step,
+                    on_epoch=True,
+                    prog_bar=True,
+                    logger=True,
                 )
 
     def training_step(self, batch, batch_idx):
@@ -130,6 +154,7 @@ class ConvNet(pl.LightningModule):
         accuracy, out = accuracy_from_out_probabilities(
             out, targets, individual_classes=[0, 1]
         )
+        self.log("drop_out-0", self.dropout_p_mem[0][0])
         self.log("loss", loss, on_step=True, prog_bar=True, logger=True)
         self.log_acc(accuracy, out=out, prefix="train")
         return loss
@@ -141,7 +166,7 @@ class ConvNet(pl.LightningModule):
         accuracy, out = accuracy_from_out_probabilities(
             out, targets, individual_classes=[1, 2]
         )
-        self.log_acc(accuracy, out=out, prefix="val")
+        self.log_acc(accuracy, out=out, prefix="val", on_step=False)
         return self.get_loss(inputs, targets)
 
     def configure_optimizers(self):

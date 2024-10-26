@@ -1,0 +1,15 @@
+{"time":"2024-10-26T16:54:59.598918627+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-26T16:54:59.598938976+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241026_165459-m15lr9lo/logs/debug-core.log"}
+{"time":"2024-10-26T16:54:59.88873095+02:00","level":"INFO","msg":"created new stream","id":"m15lr9lo"}
+{"time":"2024-10-26T16:54:59.888775916+02:00","level":"INFO","msg":"stream: started","id":"m15lr9lo"}
+{"time":"2024-10-26T16:54:59.888846824+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"m15lr9lo"}}
+{"time":"2024-10-26T16:54:59.889218567+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"m15lr9lo"}}
+{"time":"2024-10-26T16:54:59.889225627+02:00","level":"INFO","msg":"sender: started","stream_id":"m15lr9lo"}
+{"time":"2024-10-26T16:54:59.894884535+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-26T16:55:56.509080625+02:00","level":"INFO","msg":"stream: closing","id":"m15lr9lo"}
+{"time":"2024-10-26T16:55:56.509124254+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-26T16:55:56.509724995+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-26T16:55:56.509860747+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"m15lr9lo"}}
+{"time":"2024-10-26T16:55:56.509874585+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"m15lr9lo"}}
+{"time":"2024-10-26T16:55:56.5099228+02:00","level":"INFO","msg":"sender: closed","stream_id":"m15lr9lo"}
+{"time":"2024-10-26T16:55:56.509932272+02:00","level":"INFO","msg":"stream: closed","id":"m15lr9lo"}

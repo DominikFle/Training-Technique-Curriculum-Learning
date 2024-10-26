@@ -26,3 +26,7 @@ This technique is used to balance the dataset. The MNIST dataset is already bala
 class_weights=[0.1,0,1,1,1,1,1,1,1,]
 ```
 The above code would mean that the class 0 is sampled with a probability of 0.1, class 1 is not sampled, and all other classes are sampled with a probability of 1. The weights are normalized to sum up to 1. 
+#### Progressive Curriculum Learning: Semi Supervised Learning 
+https://arxiv.org/pdf/2101.10382
+#### Progressive Curriculum Learning: Progressive Dropout 
+https://arxiv.org/pdf/2101.10382

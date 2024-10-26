@@ -1,0 +1,15 @@
+{"time":"2024-10-26T15:41:20.321904085+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-26T15:41:20.321922005+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241026_154120-5wwpjdw9/logs/debug-core.log"}
+{"time":"2024-10-26T15:41:20.601526927+02:00","level":"INFO","msg":"created new stream","id":"5wwpjdw9"}
+{"time":"2024-10-26T15:41:20.601568882+02:00","level":"INFO","msg":"stream: started","id":"5wwpjdw9"}
+{"time":"2024-10-26T15:41:20.601655481+02:00","level":"INFO","msg":"sender: started","stream_id":"5wwpjdw9"}
+{"time":"2024-10-26T15:41:20.601610042+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"5wwpjdw9"}}
+{"time":"2024-10-26T15:41:20.601646566+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"5wwpjdw9"}}
+{"time":"2024-10-26T15:41:20.606227392+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-26T15:41:23.510602402+02:00","level":"INFO","msg":"stream: closing","id":"5wwpjdw9"}
+{"time":"2024-10-26T15:41:23.510625173+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-26T15:41:23.511066145+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-26T15:41:23.51124614+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"5wwpjdw9"}}
+{"time":"2024-10-26T15:41:23.511260052+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"5wwpjdw9"}}
+{"time":"2024-10-26T15:41:23.511306683+02:00","level":"INFO","msg":"sender: closed","stream_id":"5wwpjdw9"}
+{"time":"2024-10-26T15:41:23.51131955+02:00","level":"INFO","msg":"stream: closed","id":"5wwpjdw9"}

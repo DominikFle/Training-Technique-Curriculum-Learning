@@ -1,0 +1,31 @@
+{
+  "os":  "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python":  "3.12.5",
+  "startedAt":  "2024-10-26T13:41:20.311753Z",
+  "program":  "/home/domi/ml-training-technique/training/tr_progressive_dropout.py",
+  "codePath":  "training/tr_progressive_dropout.py",
+  "git":  {
+    "remote":  "https://github.com/DominikFle/Ml-Training-Technique.git",
+    "commit":  "857494cea76ac01ce2d55e134113ef95981b9f0b"
+  },
+  "root":  ".",
+  "host":  "DESKTOP-1KUR5TD",
+  "username":  "domi",
+  "executable":  "/home/domi/miniconda3/envs/ml_technique/bin/python",
+  "codePathLocal":  "training/tr_progressive_dropout.py",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "1081101176832",
+      "used":  "40589971456"
+    }
+  },
+  "memory":  {
+    "total":  "8174731264"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}
