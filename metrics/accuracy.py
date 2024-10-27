@@ -21,8 +21,6 @@ def accuracy_from_out_probabilities(
     out_sharp = torch.argmax(model_out, -1).long()
     targets = targets.long()  # target --> Bx10
     accuracy = torch.sum(out_sharp == targets) / targets.shape[0]
-    if individual_classes == []:
-        return accuracy
     out = []
     for class_index in individual_classes:
         num_i = torch.sum(targets == class_index)

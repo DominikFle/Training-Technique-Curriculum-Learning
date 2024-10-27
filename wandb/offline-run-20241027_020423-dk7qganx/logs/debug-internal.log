@@ -1,0 +1,15 @@
+{"time":"2024-10-27T02:04:23.469144031+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-27T02:04:23.469162063+02:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241027_020423-dk7qganx/logs/debug-core.log"}
+{"time":"2024-10-27T02:04:23.736117393+02:00","level":"INFO","msg":"created new stream","id":"dk7qganx"}
+{"time":"2024-10-27T02:04:23.736155202+02:00","level":"INFO","msg":"stream: started","id":"dk7qganx"}
+{"time":"2024-10-27T02:04:23.736241599+02:00","level":"INFO","msg":"sender: started","stream_id":"dk7qganx"}
+{"time":"2024-10-27T02:04:23.736210894+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"dk7qganx"}}
+{"time":"2024-10-27T02:04:23.736190386+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"dk7qganx"}}
+{"time":"2024-10-27T02:04:23.740691337+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-27T02:04:52.395425845+02:00","level":"INFO","msg":"stream: closing","id":"dk7qganx"}
+{"time":"2024-10-27T02:04:52.395445934+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-27T02:04:52.395917114+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-27T02:04:52.396052754+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"dk7qganx"}}
+{"time":"2024-10-27T02:04:52.396073732+02:00","level":"INFO","msg":"sender: closed","stream_id":"dk7qganx"}
+{"time":"2024-10-27T02:04:52.396071091+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"dk7qganx"}}
+{"time":"2024-10-27T02:04:52.396126386+02:00","level":"INFO","msg":"stream: closed","id":"dk7qganx"}

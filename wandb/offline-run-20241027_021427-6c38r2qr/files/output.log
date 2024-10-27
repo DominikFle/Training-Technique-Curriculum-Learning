@@ -1,0 +1,36 @@
+  | Name                        | Type             | Params | Mode
+-------------------------------------------------------------------------
+0 | layers                      | ModuleList       | 67.4 K | train
+1 | flatten                     | Flatten          | 0      | train
+2 | project_into_classification | Linear           | 125 K  | train
+3 | softmax                     | Softmax          | 0      | train
+4 | loss_criterion              | CrossEntropyLoss | 0      | train
+-------------------------------------------------------------------------
+192 K     Trainable params
+0         Non-trainable params
+192 K     Total params
+0.771     Total estimated model params size (MB)
+23        Modules in train mode
+0         Modules in eval mode
+Epoch 0: 100%|███| 375/375 [00:28<00:00, 12.97it/s, v_num=r2qr, loss=0.0755, train-acc=0.938, val-acc_step=0.500, val-acc_epoch=0.337]First 30 Weights: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0])
+First 30 Classes: tensor([7, 1, 6, 9, 7, 7, 7, 4, 4, 1, 1, 1, 4, 7, 1, 7, 8, 7, 7, 1, 1, 7, 7, 4,
+        4, 6, 6, 4, 4, 8])
+Epoch 1: 100%|█| 375/375 [00:31<00:00, 11.90it/s, v_num=r2qr, loss=0.0328, train-acc=1.000, val-acc_step=0.500, val-acc_epoch=0.615, SFirst 30 Weights: tensor([0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0,
+        1, 0, 0, 1, 0, 1])
+First 30 Classes: tensor([7, 1, 1, 6, 9, 8, 6, 0, 4, 9, 6, 9, 9, 7, 7, 7, 8, 9, 9, 1, 1, 8, 0, 6,
+        4, 6, 6, 4, 9, 8])
+Epoch 2: 100%|█| 375/375 [00:31<00:00, 12.06it/s, v_num=r2qr, loss=0.0625, train-acc=0.969, val-acc_step=0.500, val-acc_epoch=0.606, SFirst 30 Weights: tensor([1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0,
+        1, 0, 1, 1, 0, 1])
+First 30 Classes: tensor([0, 1, 1, 5, 2, 8, 0, 0, 4, 4, 8, 2, 0, 7, 7, 1, 8, 5, 4, 1, 1, 8, 0, 6,
+        4, 1, 6, 4, 0, 8])
+Epoch 3: 100%|█| 375/375 [00:32<00:00, 11.66it/s, v_num=r2qr, loss=0.208, train-acc=0.875, val-acc_step=0.812, val-acc_epoch=0.771, SaFirst 30 Weights: tensor([1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1,
+        1, 0, 1, 1, 0, 1])
+First 30 Classes: tensor([0, 1, 1, 5, 2, 8, 2, 0, 4, 9, 1, 2, 2, 7, 7, 3, 2, 3, 9, 1, 1, 8, 0, 6,
+        4, 1, 6, 4, 4, 8])
+Epoch 4: 100%|█| 375/375 [00:32<00:00, 11.58it/s, v_num=r2qr, loss=0.099, train-acc=0.938, val-acc_step=0.625, val-acc_epoch=0.604, SaFirst 30 Weights: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1])
+First 30 Classes: tensor([2, 1, 1, 5, 2, 2, 2, 2, 4, 1, 5, 2, 2, 7, 7, 3, 2, 5, 7, 1, 1, 8, 2, 6,
+        4, 6, 6, 4, 2, 8])
+Epoch 4: 100%|█| 375/375 [00:34<00:00, 10.82it/s, v_num=r2qr, loss=0.099, train-acc=0.938, val-acc_step=0.625, val-acc_epoch=0.604, Sa
+`Trainer.fit` stopped: `max_epochs=5` reached.

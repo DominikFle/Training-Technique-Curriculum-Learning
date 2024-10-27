@@ -12,7 +12,7 @@ class SelfLearningQuantileWeighingCallback(pl.Callback):
     the quantil according to the epoch.
     """
 
-    def __init__(self, start_epoch, end_epoch):
+    def __init__(self, start_epoch, end_epoch, verbose=False):
         """
         mixes in unsupervised training data with linearly increasing fraction from start_epoch to end_epoch
         similar to https://arxiv.org/abs/2001.06001
@@ -22,6 +22,7 @@ class SelfLearningQuantileWeighingCallback(pl.Callback):
         """
         self.start_epoch = start_epoch
         self.end_epoch = end_epoch
+        self.verbose = verbose
         assert start_epoch < end_epoch, "Start epoch must be smaller than end epoch"
 
     def predict_unsupervised_samples(
@@ -34,12 +35,14 @@ class SelfLearningQuantileWeighingCallback(pl.Callback):
         with torch.no_grad():
             classes = []
             confidences = []
-            for batch in dataloader_unsupervised():
+            for batch in dataloader_unsupervised:
                 imgs, y = batch
                 preds = model.forward(imgs, with_softmax=True)
-                classes_in_batch = torch.argmax(preds, dim=-1).long()
-                confidence_in_batch = torch.max(preds)
-                classes.append(classes_in_batch)
+                # classes_in_batch = torch.argmax(preds, dim=-1).long()
+                confidence_in_batch, classes_in_batch = torch.max(
+                    preds, dim=-1
+                )  # te indices are the classes
+                classes.append(classes_in_batch.long())
                 confidences.append(confidence_in_batch)
             classes = torch.concat(classes, dim=0)
             confidences = torch.concat(confidences, dim=0)
@@ -47,13 +50,13 @@ class SelfLearningQuantileWeighingCallback(pl.Callback):
         model.train()
         return classes, confidences
 
-    def on_epoch_end(self, trainer, model):
-        epoch = self.trainer.current_epoch + 1
+    def on_train_epoch_end(self, trainer, model: ConvNet):
+        epoch = trainer.current_epoch + 1
         if epoch > self.end_epoch or epoch < self.start_epoch:
             return
         datamodule: SelfLearningCLMnistDataModule = trainer.datamodule
         classes, confidences = self.predict_unsupervised_samples(datamodule, model)
-        quantile = (self.end_epoch - epoch) / self.end_epoch - self.start_epoch
+        quantile = (self.end_epoch - epoch) / (self.end_epoch - self.start_epoch)
         q_threshold = torch.quantile(confidences, q=quantile)
         weights_to_keep = torch.where(confidences >= q_threshold, 1, 0)
         # set classes for all examples
@@ -69,3 +72,13 @@ class SelfLearningQuantileWeighingCallback(pl.Callback):
             weights=weights, num_samples=datamodule.len_train_dataset
         )
         # the sampler is then used when the dataloader is rebuilt every epoch
+        if self.verbose:
+            model.log(
+                "SamplerWeights Zeros percentage",
+                torch.sum(weights_to_keep) / weights_to_keep.shape[0],
+                on_epoch=True,
+                prog_bar=True,
+                logger=True,
+            )
+            print("First 30 Weights:", weights_to_keep[:30])
+            print("First 30 Classes:", classes[:30])

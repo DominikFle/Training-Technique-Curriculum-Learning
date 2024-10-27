@@ -63,9 +63,11 @@ class ConvNet(pl.LightningModule):
         learning_rate=0.01,
         weight_decay=0.01,
         dropout_schedule=None,
+        log_extra_acc_per_classes=[0, 1],  # [1,2]
     ):
         super().__init__()
         self.save_hyperparameters()
+        self.log_extra_acc_per_classes = log_extra_acc_per_classes
         self.num_classes = num_classes
         self.learning_rate = learning_rate
         self.weight_decay = weight_decay
@@ -152,7 +154,7 @@ class ConvNet(pl.LightningModule):
         loss = self.get_loss(inputs, targets)
         out = self(inputs, with_softmax=True)  # out --> Bx10
         accuracy, out = accuracy_from_out_probabilities(
-            out, targets, individual_classes=[0, 1]
+            out, targets, individual_classes=self.log_extra_acc_per_classes
         )
         self.log("drop_out-0", self.dropout_p_mem[0][0])
         self.log("loss", loss, on_step=True, prog_bar=True, logger=True)
@@ -164,7 +166,7 @@ class ConvNet(pl.LightningModule):
         targets = targets.long()  # target --> Bx10
         out = self(inputs, with_softmax=True)  # out --> Bx10
         accuracy, out = accuracy_from_out_probabilities(
-            out, targets, individual_classes=[1, 2]
+            out, targets, individual_classes=self.log_extra_acc_per_classes
         )
         self.log_acc(accuracy, out=out, prefix="val", on_step=False)
         return self.get_loss(inputs, targets)

@@ -1,0 +1,1 @@
+{"trainer/global_step": 1874, "_timestamp": 1729986852.2683873, "_runtime": 153.342876195, "_step": 1606, "drop_out-0": 0, "loss": 0.01185021921992302, "train-acc": 1, "epoch": 4, "val-acc_step": 1, "val-acc_epoch": 0.9430999755859375}

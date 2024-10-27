@@ -1,47 +1,29 @@
 from data.MNIST_Info import MNIST_INFO
+from data_loading.SelfLearningCLDataModule import SelfLearningCLMnistDataModule
 from models.ConvNet import ConvNet
 import lightning.pytorch as pl
 from torchinfo import summary
 from data_loading.SimpleDataModule import SimpleMnistDataModule
 from lightning.pytorch.loggers import WandbLogger
 
-wandb_logger = WandbLogger(project="MNIST_dropout_curriculum", offline=True)
+from training_callbacks.SelfLearningQuantileWeighingCallback import (
+    SelfLearningQuantileWeighingCallback,
+)
+
+wandb_logger = WandbLogger(project="MNIST_selflearning_curriculum", offline=True)
 batch_size = 32
 workers = 7
 percent_of_dataset = 0.1
-dm = SimpleMnistDataModule(
+dm = SelfLearningCLMnistDataModule(
     batch_size=batch_size,
-    percent_of_dataset=percent_of_dataset,
+    percent_of_dataset_supervised=0.1,
+    percent_of_dataset_unsupervised=0.1,
     shuffle=True,
     workers=workers,
-    class_weights=[
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-    ],  # [0, 1, 1, 1, 1, 1, 1, 1, 1, 1] --> exclude class 0
 )
-
-
-def linear_dropout(
-    epoch: int,
-    dropout_mem: dict[int, list[int]],
-    start_dropout=0.05,
-    end_dropout=1,
-    end_epoch=2,
-):
-
-    for dropout_layer_key in dropout_mem:
-        dropout_mem[dropout_layer_key][0] = min(
-            start_dropout + epoch / end_epoch * (end_dropout - start_dropout),
-            end_dropout,
-        )
+schedule = SelfLearningQuantileWeighingCallback(
+    start_epoch=1, end_epoch=5, verbose=True
+)
 
 
 model = ConvNet(
@@ -51,17 +33,20 @@ model = ConvNet(
     strides=[1, 2],
     learning_rate=0.01,
     weight_decay=0.1,
-    dropout_schedule=linear_dropout,
+    dropout_schedule=None,
+    log_extra_acc_per_classes=[],
 )
 
 print(summary(model, input_size=(batch_size, 1, *MNIST_INFO.img_size)))
-max_epochs = 3
+max_epochs = 5
 trainer = pl.Trainer(
     accelerator="auto",
     devices=1,
     max_epochs=max_epochs,
     check_val_every_n_epoch=1,
     logger=wandb_logger,
+    callbacks=[schedule],
+    reload_dataloaders_every_n_epochs=1,
 )
 epochs_load = 200
 ckpth = None

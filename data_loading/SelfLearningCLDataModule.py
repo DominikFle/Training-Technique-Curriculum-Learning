@@ -33,7 +33,7 @@ class SelfLearningCLMnistDataModule(pl.LightningDataModule):
             percent_of_dataset_supervised + percent_of_dataset_supervised
         )
         file_labels = MNIST_INFO.train_labels_path
-        labels_train = idx2numpy.convert_from_file(file_labels)
+        labels_train = np.copy(idx2numpy.convert_from_file(file_labels))
         self.len_train_dataset = int(len(labels_train) * self.percent_of_dataset)
         self.start_supervised = 0
         self.end_supervised = int(percent_of_dataset_supervised * len(labels_train))
@@ -41,7 +41,7 @@ class SelfLearningCLMnistDataModule(pl.LightningDataModule):
             int(percent_of_dataset_supervised * len(labels_train)) + 1
         )
         self.end_unsupervised = self.len_train_dataset - 1
-        weights = [1] * self.len_train_dataset
+        weights = np.array([1] * self.len_train_dataset)
         weights[self.start_unsupervised : self.end_unsupervised + 1] = (
             0  # in the beginning dont sample unsupervised
         )
