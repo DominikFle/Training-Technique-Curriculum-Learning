@@ -1,0 +1,15 @@
+{"time":"2024-10-28T00:14:33.690473467+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-28T00:14:33.690575005+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241028_001433-mohno5it/logs/debug-core.log"}
+{"time":"2024-10-28T00:14:34.363862488+01:00","level":"INFO","msg":"created new stream","id":"mohno5it"}
+{"time":"2024-10-28T00:14:34.364084784+01:00","level":"INFO","msg":"stream: started","id":"mohno5it"}
+{"time":"2024-10-28T00:14:34.364403807+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mohno5it"}}
+{"time":"2024-10-28T00:14:34.364596269+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"mohno5it"}}
+{"time":"2024-10-28T00:14:34.364626972+01:00","level":"INFO","msg":"sender: started","stream_id":"mohno5it"}
+{"time":"2024-10-28T00:14:34.386189852+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-28T00:17:18.023233278+01:00","level":"INFO","msg":"stream: closing","id":"mohno5it"}
+{"time":"2024-10-28T00:17:18.023829009+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-28T00:17:18.031358938+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-28T00:17:18.033344718+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"mohno5it"}}
+{"time":"2024-10-28T00:17:18.033541494+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mohno5it"}}
+{"time":"2024-10-28T00:17:18.03361319+01:00","level":"INFO","msg":"sender: closed","stream_id":"mohno5it"}
+{"time":"2024-10-28T00:17:18.03390403+01:00","level":"INFO","msg":"stream: closed","id":"mohno5it"}

@@ -1,0 +1,15 @@
+{"time":"2024-10-28T00:38:08.299129184+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-28T00:38:08.29923515+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241028_003808-5crazzby/logs/debug-core.log"}
+{"time":"2024-10-28T00:38:09.443835824+01:00","level":"INFO","msg":"created new stream","id":"5crazzby"}
+{"time":"2024-10-28T00:38:09.443889798+01:00","level":"INFO","msg":"stream: started","id":"5crazzby"}
+{"time":"2024-10-28T00:38:09.443972878+01:00","level":"INFO","msg":"sender: started","stream_id":"5crazzby"}
+{"time":"2024-10-28T00:38:09.443940446+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"5crazzby"}}
+{"time":"2024-10-28T00:38:09.444070066+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"5crazzby"}}
+{"time":"2024-10-28T00:38:09.455602504+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-28T00:40:47.954423836+01:00","level":"INFO","msg":"stream: closing","id":"5crazzby"}
+{"time":"2024-10-28T00:40:47.954722825+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-28T00:40:47.956479424+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-28T00:40:47.961107336+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"5crazzby"}}
+{"time":"2024-10-28T00:40:47.961166782+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"5crazzby"}}
+{"time":"2024-10-28T00:40:47.961243089+01:00","level":"INFO","msg":"sender: closed","stream_id":"5crazzby"}
+{"time":"2024-10-28T00:40:47.961399772+01:00","level":"INFO","msg":"stream: closed","id":"5crazzby"}

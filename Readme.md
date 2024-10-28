@@ -8,7 +8,7 @@ Planned is:
 - [Weighted Data Sampling](#weighted-data-sampling)
 - [Progressive Curriculum Learning: Progressive Dropout](#progressive-curriculum-learning-progressive-dropout)
 - [Progressive Curriculum Learning: Semi Supervised Learning](#progressive-curriculum-learning-semi-supervised-learning)
-- Learning Rate Scheduling
+- [Learning Rate Scheduling and Parameter Groups](#learning-rate-scheduling-and-parameter-groups)
 - Random Weight Initialization in Pytorch
 - Data Augmentation
 - Layerwise Learning Rate & Weight Decay
@@ -48,7 +48,7 @@ def linear_dropout(
         )
 ```
 #### Semi Supervised Self-Learning (Curriculum Learning)
- Self Learning is a form of (Semi Supervised Learning](https://arxiv.org/pdf/2101.10382). In Self Learning the model is initialized by training on the labeled data first. Afterwards unlabeled examples are added to the dataset where the label is the prediction of the model. The implementation here follows the approach of the paper [Curriculum Labeling: Revisiting Pseudo-Labeling for Semi-Supervised Learning](https://cdn.aaai.org/ojs/16852/16852-13-20346-1-2-20210518.pdf). The main idea is to use a curriculum to add increasingly more and harder examples from the unsupervised subset into the training set. The unsupervised examples are chosen by a increasing confidence quantile of the predictions of the model. In practice the quantile is linearly increased from 0 to 1 from a start epoch to the end epoch. The training script is `tr_self_learning_cl.py`[🔗](training/tr_self_learning_cl.py). The Curriculum is implemented as custom Callback in pytorch lightning (see [here](training_callbacks/SelfLearningQuantileWeighingCallback.py)). The Schedule is than used as 
+ Self Learning is a form of [Semi Supervised Learning](https://arxiv.org/pdf/2101.10382). In Self Learning the model is initialized by training on the labeled data first. Afterwards unlabeled examples are added to the dataset where the label is the prediction of the model. The implementation here follows the approach of the paper [Curriculum Labeling: Revisiting Pseudo-Labeling for Semi-Supervised Learning](https://cdn.aaai.org/ojs/16852/16852-13-20346-1-2-20210518.pdf). The main idea is to use a curriculum to add increasingly more and harder examples from the unsupervised subset into the training set. The unsupervised examples are chosen by a increasing confidence quantile of the predictions of the model. In practice the quantile is linearly increased from 0 to 1 from a start epoch to the end epoch. The training script is `tr_self_learning_cl.py`[🔗](training/tr_self_learning_cl.py). The Curriculum is implemented as custom Callback in pytorch lightning (see [here](training_callbacks/SelfLearningQuantileWeighingCallback.py)). The Schedule is than used as 
 ```python
 schedule = SelfLearningQuantileWeighingCallback(
     start_epoch=1, end_epoch=5, verbose=True
@@ -61,6 +61,6 @@ schedule = SelfLearningQuantileWeighingCallback(
 # 5. epoch : 1.0 unsupervised data
 # n. epoch : 1.0 unsupervised data
 ```
-
-
-
+#### Learning Rate Scheduling and Parameter Groups
+1. **Varying Learning Rate over the Training** In many cases it might be beneficial to use varying learning rate over the training process. This can also be interpreted as curriculum learning. For example to achieve robust training of transformers oftentimes warmup followed by cosine learning rate is used.
+2. **Varying Learning Rate and Regularization over the Layers** In many cases it might be beneficial to use varying learning rate and regularization over the layers of the model. For example to achieve robust training of transformers sometimes layerwise learning rate is used. Also typically embeddings are not weight regularized.

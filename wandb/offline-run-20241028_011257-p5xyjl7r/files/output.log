@@ -1,0 +1,26 @@
+  | Name                        | Type             | Params | Mode
+-------------------------------------------------------------------------
+0 | layers                      | ModuleList       | 67.4 K | train
+1 | flatten                     | Flatten          | 0      | train
+2 | project_into_classification | Linear           | 125 K  | train
+3 | softmax                     | Softmax          | 0      | train
+4 | loss_criterion              | CrossEntropyLoss | 0      | train
+-------------------------------------------------------------------------
+192 K     Trainable params
+0         Non-trainable params
+192 K     Total params
+0.771     Total estimated model params size (MB)
+23        Modules in train mode
+0         Modules in eval mode
+/home/domi/miniconda3/envs/ml_technique/lib/python3.12/site-packages/lightning/pytorch/loops/fit_loop.py:298: The number of training batches (19) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+Epoch 2: 100%|█| 19/19 [00:02<00:00,  6.45it/s, v_num=jl7r, loss=0.300, train-acc=0.958, train-acc-0_step=1.000, train-acc-1_step=1.00
+Validation DataLoader 0:  90%|███████████████████████████████████████████████████████████████       | 282/313 [00:15<00:01, 18.13it/s]
+/home/domi/miniconda3/envs/ml_technique/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+
+
+Epoch 18: 100%|█| 19/19 [00:01<00:00, 14.85it/s, v_num=jl7r, loss=0.00118, train-acc=1.000, train-acc-0_step=1.000, train-acc-1_step=1
+
+
+Validation DataLoader 0:  50%|███████████████████████████████████                                   | 157/313 [00:04<00:04, 34.27it/s]
+
+`Trainer.fit` stopped: `max_epochs=30` reached.
