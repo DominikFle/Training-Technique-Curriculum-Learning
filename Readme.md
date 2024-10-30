@@ -8,7 +8,8 @@ Planned is:
 - [Weighted Data Sampling](#weighted-data-sampling)
 - [Progressive Curriculum Learning: Progressive Dropout](#progressive-curriculum-learning-progressive-dropout)
 - [Progressive Curriculum Learning: Semi Supervised Learning](#progressive-curriculum-learning-semi-supervised-learning)
-- [Learning Rate Scheduling and Parameter Groups](#learning-rate-scheduling-and-parameter-groups)
+- [Learning Rate Scheduling](#learning-rate-scheduling-)
+- [Parameter Groups](#parameter-groups)
 - Random Weight Initialization in Pytorch
 - Data Augmentation
 - Layerwise Learning Rate & Weight Decay
@@ -61,6 +62,7 @@ schedule = SelfLearningQuantileWeighingCallback(
 # 5. epoch : 1.0 unsupervised data
 # n. epoch : 1.0 unsupervised data
 ```
-#### Learning Rate Scheduling and Parameter Groups
-1. **Varying Learning Rate over the Training** In many cases it might be beneficial to use varying learning rate over the training process. This can also be interpreted as curriculum learning. For example to achieve robust training of transformers oftentimes warmup followed by cosine learning rate is used.
-2. **Varying Learning Rate and Regularization over the Layers** In many cases it might be beneficial to use varying learning rate and regularization over the layers of the model. For example to achieve robust training of transformers sometimes layerwise learning rate is used. Also typically embeddings are not weight regularized.
+#### Learning Rate Scheduling
+**Varying Learning Rate over the Training** In many cases it might be beneficial to use varying learning rate over the training process. This can also be interpreted as curriculum learning. For example to achieve robust training of transformers oftentimes warmup followed by cosine learning rate is used.
+#### Parameter Groups
+**Varying Learning Rate and Regularization over the Layers** In many cases it might be beneficial to use varying learning rate and regularization over the layers of the model. For example to achieve robust training of transformers sometimes layerwise learning rate is used. Typically embeddings are not weight regularized.

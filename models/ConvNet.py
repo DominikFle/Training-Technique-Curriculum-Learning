@@ -7,6 +7,7 @@ import torch
 
 from metrics.accuracy import accuracy_from_out_probabilities
 from models.DynamicDropout import DynamicDropout
+from technique_abstractions.create_optimizer_groups import create_optimizer_groups
 
 
 class ResBlock(nn.Module):
@@ -64,7 +65,8 @@ class ConvNet(pl.LightningModule):
         weight_decay=0.01,
         dropout_schedule=None,
         log_extra_acc_per_classes=[0, 1],  # [1,2]
-        dont_decay_parameter: list[str] = None,  # ["pos_emedding"]
+        dont_decay_parameters: list[str] = None,  # ["pos_emedding"]
+        learning_rate_factors: list[str] = None,
         warmup_epochs=3,
         cosine_period=3,
     ):
@@ -78,7 +80,8 @@ class ConvNet(pl.LightningModule):
         self.dropout_p_mem = {
             # name: [p] --> to adjust the p dynamically
         }
-        self.dont_decay_parameter = dont_decay_parameter
+        self.dont_decay_parameter = dont_decay_parameters
+        self.learning_rate_factors = learning_rate_factors
         self.warmup_epochs = warmup_epochs
         self.cosine_period = cosine_period
         self.layers = nn.ModuleList([])
@@ -179,22 +182,31 @@ class ConvNet(pl.LightningModule):
 
     def configure_optimizers(self):
         # group parameters into decaying and not decaying, also possible for learning rate
-        if not self.dont_decay_parameter:
+        # if not self.dont_decay_parameter:
+        #     params = self.parameters()
+        # else:
+        #     params_with_decay = []
+        #     params_without_decay = []
+        #     for name, param in self.named_parameters():
+        #         for dont_decay in self.dont_decay_parameter:
+        #             if dont_decay in name:
+        #                 params_without_decay.append(param)
+        #             else:
+        #                 params_with_decay.append(param)
+        #     params = [
+        #         {"params": params_with_decay},
+        #         {"params": params_without_decay, "weight_decay": 0.0},
+        #     ]
+        if not self.dont_decay_parameter and not self.learning_rate_factors:
             params = self.parameters()
         else:
-            params_with_decay = []
-            params_without_decay = []
-            for name, param in self.named_parameters():
-                for dont_decay in self.dont_decay_parameter:
-                    if dont_decay in name:
-                        params_without_decay.append(param)
-                    else:
-                        params_with_decay.append(param)
-            params = [
-                {"params": params_with_decay},
-                {"params": params_without_decay, "weight_decay": 0.0},
-            ]
-
+            params = create_optimizer_groups(
+                self,
+                self.learning_rate,
+                self.dont_decay_parameter,
+                self.learning_rate_factors,
+                verbose=True,
+            )
         optimizer = torch.optim.AdamW(
             params, lr=self.learning_rate, weight_decay=self.weight_decay
         )

@@ -1,12 +1,12 @@
 import torch.nn as nn
 
 
-# TODO test this
 def create_optimizer_groups(
     model: nn.Module,
     base_learning_rate: float,
     dont_decay_parameters: list[str],
     learning_rate_factors: dict[float, list[str]],  # factor --> list[layer names]
+    verbose=False,
 ) -> list[dict]:
     """
     Determines the parameter groups to be used in the optimizers when the grouping gets more complicated.
@@ -56,7 +56,6 @@ def create_optimizer_groups(
                     "weight_decay": 0.0,
                 }
             )
-        return params
     elif dont_decay:
         weights_with_decay = []
         weights_without_decay = []
@@ -70,7 +69,6 @@ def create_optimizer_groups(
             {"params": weights_with_decay},
             {"params": weights_without_decay, "weight_decay": 0.0},
         ]
-        return params
     elif learning_rate_factors:
         weights = {}
         for name, param in model.named_parameters():
@@ -88,6 +86,13 @@ def create_optimizer_groups(
         params = []
         for lr_factor, weights in weights.items():
             params.append({"params": weights, "lr": base_learning_rate * lr_factor})
-        return params
     else:
         ValueError("Should not happen!")
+    if verbose:
+        for i, group in enumerate(params):
+            print(f"Parameter group {i}:")
+        if group["weight_decay"] == 0.0:
+            print(f"Weight Decay: 0")
+        if "lr" in group:
+            print(f"Learning Rate: {group["lr"]}")
+    return params

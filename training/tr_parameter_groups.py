@@ -6,7 +6,7 @@ from data_loading.SimpleDataModule import SimpleMnistDataModule
 from lightning.pytorch.loggers import WandbLogger
 from lightning.pytorch.callbacks import LearningRateMonitor
 
-wandb_logger = WandbLogger(project="MNIST_learning_rate_schedule", offline=True)
+wandb_logger = WandbLogger(project="MNIST_param_groups", offline=True)
 batch_size = 32
 workers = 7
 percent_of_dataset = 0.01
@@ -25,6 +25,8 @@ model = ConvNet(
     weight_decay=0.1,
     warmup_epochs=5,
     cosine_period=10,
+    dont_decay_parameters=[],
+    learning_rate_factors=[],
 )
 lr_monitor = LearningRateMonitor(logging_interval="step")
 print(summary(model, input_size=(batch_size, 1, *MNIST_INFO.img_size)))
