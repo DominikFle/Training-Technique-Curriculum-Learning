@@ -1,0 +1,15 @@
+{"time":"2024-10-30T15:12:41.441426393+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T15:12:41.441448761+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241030_151241-rswz6nsl/logs/debug-core.log"}
+{"time":"2024-10-30T15:12:41.735376266+01:00","level":"INFO","msg":"created new stream","id":"rswz6nsl"}
+{"time":"2024-10-30T15:12:41.735413931+01:00","level":"INFO","msg":"stream: started","id":"rswz6nsl"}
+{"time":"2024-10-30T15:12:41.735491237+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"rswz6nsl"}}
+{"time":"2024-10-30T15:12:41.735461966+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"rswz6nsl"}}
+{"time":"2024-10-30T15:12:41.735488257+01:00","level":"INFO","msg":"sender: started","stream_id":"rswz6nsl"}
+{"time":"2024-10-30T15:12:41.742783538+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T15:12:42.058588444+01:00","level":"INFO","msg":"stream: closing","id":"rswz6nsl"}
+{"time":"2024-10-30T15:12:42.058762049+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T15:12:42.059271906+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-30T15:12:42.059403524+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"rswz6nsl"}}
+{"time":"2024-10-30T15:12:42.059418815+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"rswz6nsl"}}
+{"time":"2024-10-30T15:12:42.059468605+01:00","level":"INFO","msg":"sender: closed","stream_id":"rswz6nsl"}
+{"time":"2024-10-30T15:12:42.059475175+01:00","level":"INFO","msg":"stream: closed","id":"rswz6nsl"}

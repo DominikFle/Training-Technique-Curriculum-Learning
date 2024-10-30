@@ -1,0 +1,15 @@
+{"time":"2024-10-30T14:42:37.941523178+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T14:42:37.941545802+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241030_144237-4snk44fm/logs/debug-core.log"}
+{"time":"2024-10-30T14:42:38.258273012+01:00","level":"INFO","msg":"created new stream","id":"4snk44fm"}
+{"time":"2024-10-30T14:42:38.258311118+01:00","level":"INFO","msg":"stream: started","id":"4snk44fm"}
+{"time":"2024-10-30T14:42:38.258393118+01:00","level":"INFO","msg":"sender: started","stream_id":"4snk44fm"}
+{"time":"2024-10-30T14:42:38.25835601+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"4snk44fm"}}
+{"time":"2024-10-30T14:42:38.258410269+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"4snk44fm"}}
+{"time":"2024-10-30T14:42:38.263543821+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T14:42:45.657853258+01:00","level":"INFO","msg":"stream: closing","id":"4snk44fm"}
+{"time":"2024-10-30T14:42:45.657984451+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T14:42:45.660796145+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-30T14:42:45.661226994+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"4snk44fm"}}
+{"time":"2024-10-30T14:42:45.661261733+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"4snk44fm"}}
+{"time":"2024-10-30T14:42:45.661366591+01:00","level":"INFO","msg":"sender: closed","stream_id":"4snk44fm"}
+{"time":"2024-10-30T14:42:45.661421093+01:00","level":"INFO","msg":"stream: closed","id":"4snk44fm"}

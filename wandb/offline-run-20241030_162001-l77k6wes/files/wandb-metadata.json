@@ -1,0 +1,31 @@
+{
+  "os":  "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python":  "3.12.5",
+  "startedAt":  "2024-10-30T15:20:01.445797Z",
+  "program":  "/home/domi/ml-training-technique/training/tr_parameter_groups.py",
+  "codePath":  "training/tr_parameter_groups.py",
+  "git":  {
+    "remote":  "https://github.com/DominikFle/Ml-Training-Technique.git",
+    "commit":  "4d184adf2b950e1bcbbb2c7fdb4dcd04076766cb"
+  },
+  "root":  ".",
+  "host":  "DESKTOP-1KUR5TD",
+  "username":  "domi",
+  "executable":  "/home/domi/miniconda3/envs/ml_technique/bin/python",
+  "codePathLocal":  "training/tr_parameter_groups.py",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "1081101176832",
+      "used":  "40798920704"
+    }
+  },
+  "memory":  {
+    "total":  "8174731264"
+  },
+  "cpu":  {
+    "count":  4,
+    "countLogical":  8
+  }
+}

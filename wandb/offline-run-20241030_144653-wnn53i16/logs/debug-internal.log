@@ -1,0 +1,15 @@
+{"time":"2024-10-30T14:46:53.137896309+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T14:46:53.137924072+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241030_144653-wnn53i16/logs/debug-core.log"}
+{"time":"2024-10-30T14:46:53.404638175+01:00","level":"INFO","msg":"created new stream","id":"wnn53i16"}
+{"time":"2024-10-30T14:46:53.404675988+01:00","level":"INFO","msg":"stream: started","id":"wnn53i16"}
+{"time":"2024-10-30T14:46:53.404741616+01:00","level":"INFO","msg":"sender: started","stream_id":"wnn53i16"}
+{"time":"2024-10-30T14:46:53.404707358+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wnn53i16"}}
+{"time":"2024-10-30T14:46:53.404756651+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wnn53i16"}}
+{"time":"2024-10-30T14:46:53.410058247+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T14:46:53.842953234+01:00","level":"INFO","msg":"stream: closing","id":"wnn53i16"}
+{"time":"2024-10-30T14:46:53.842992928+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T14:46:53.843502146+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-30T14:46:53.843677235+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wnn53i16"}}
+{"time":"2024-10-30T14:46:53.843705003+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wnn53i16"}}
+{"time":"2024-10-30T14:46:53.843746794+01:00","level":"INFO","msg":"sender: closed","stream_id":"wnn53i16"}
+{"time":"2024-10-30T14:46:53.84376936+01:00","level":"INFO","msg":"stream: closed","id":"wnn53i16"}

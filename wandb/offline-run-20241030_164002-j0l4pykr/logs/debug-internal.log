@@ -1,0 +1,15 @@
+{"time":"2024-10-30T16:40:02.251274174+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T16:40:02.251305987+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241030_164002-j0l4pykr/logs/debug-core.log"}
+{"time":"2024-10-30T16:40:02.540972063+01:00","level":"INFO","msg":"created new stream","id":"j0l4pykr"}
+{"time":"2024-10-30T16:40:02.541048749+01:00","level":"INFO","msg":"stream: started","id":"j0l4pykr"}
+{"time":"2024-10-30T16:40:02.541139781+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"j0l4pykr"}}
+{"time":"2024-10-30T16:40:02.541245417+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"j0l4pykr"}}
+{"time":"2024-10-30T16:40:02.541265401+01:00","level":"INFO","msg":"sender: started","stream_id":"j0l4pykr"}
+{"time":"2024-10-30T16:40:02.547233794+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T16:40:23.677688312+01:00","level":"INFO","msg":"stream: closing","id":"j0l4pykr"}
+{"time":"2024-10-30T16:40:23.678367629+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T16:40:23.679164927+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-30T16:40:23.681013235+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"j0l4pykr"}}
+{"time":"2024-10-30T16:40:23.681054795+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"j0l4pykr"}}
+{"time":"2024-10-30T16:40:23.681059149+01:00","level":"INFO","msg":"sender: closed","stream_id":"j0l4pykr"}
+{"time":"2024-10-30T16:40:23.681105087+01:00","level":"INFO","msg":"stream: closed","id":"j0l4pykr"}

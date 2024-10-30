@@ -66,7 +66,7 @@ class ConvNet(pl.LightningModule):
         dropout_schedule=None,
         log_extra_acc_per_classes=[0, 1],  # [1,2]
         dont_decay_parameters: list[str] = None,  # ["pos_emedding"]
-        learning_rate_factors: list[str] = None,
+        learning_rate_factors: dict[float, list[str]] = None,
         warmup_epochs=3,
         cosine_period=3,
     ):

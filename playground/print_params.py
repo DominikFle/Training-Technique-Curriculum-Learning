@@ -4,8 +4,11 @@ from models.ConvNet import ConvNet
 
 
 def print_params(model: nn.Module):
+    i = 0
     for name, param in model.named_parameters():
+        i += 1
         print(name)
+    print(f"Found {i} param Tensors")
 
 
 if __name__ == "__main__":

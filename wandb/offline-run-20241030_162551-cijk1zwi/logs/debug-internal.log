@@ -1,0 +1,15 @@
+{"time":"2024-10-30T16:25:51.982551257+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T16:25:51.982576614+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241030_162551-cijk1zwi/logs/debug-core.log"}
+{"time":"2024-10-30T16:25:52.233579909+01:00","level":"INFO","msg":"created new stream","id":"cijk1zwi"}
+{"time":"2024-10-30T16:25:52.233623183+01:00","level":"INFO","msg":"stream: started","id":"cijk1zwi"}
+{"time":"2024-10-30T16:25:52.233672007+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"cijk1zwi"}}
+{"time":"2024-10-30T16:25:52.233673416+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"cijk1zwi"}}
+{"time":"2024-10-30T16:25:52.233809685+01:00","level":"INFO","msg":"sender: started","stream_id":"cijk1zwi"}
+{"time":"2024-10-30T16:25:52.2405524+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T16:25:52.653783768+01:00","level":"INFO","msg":"stream: closing","id":"cijk1zwi"}
+{"time":"2024-10-30T16:25:52.653877985+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T16:25:52.65442406+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-30T16:25:52.65466248+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"cijk1zwi"}}
+{"time":"2024-10-30T16:25:52.654697959+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"cijk1zwi"}}
+{"time":"2024-10-30T16:25:52.654734995+01:00","level":"INFO","msg":"sender: closed","stream_id":"cijk1zwi"}
+{"time":"2024-10-30T16:25:52.65474806+01:00","level":"INFO","msg":"stream: closed","id":"cijk1zwi"}

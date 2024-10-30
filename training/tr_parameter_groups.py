@@ -25,12 +25,14 @@ model = ConvNet(
     weight_decay=0.1,
     warmup_epochs=5,
     cosine_period=10,
-    dont_decay_parameters=[],
-    learning_rate_factors=[],
+    dont_decay_parameters=["project_into_classification", "layers.0"],
+    learning_rate_factors={
+        2: ["project_into_classification", "layers.2.skip.weight"],
+    },
 )
 lr_monitor = LearningRateMonitor(logging_interval="step")
 print(summary(model, input_size=(batch_size, 1, *MNIST_INFO.img_size)))
-max_epochs = 30
+max_epochs = 20
 trainer = pl.Trainer(
     accelerator="auto",
     devices=1,
@@ -43,6 +45,6 @@ epochs_load = 200
 ckpth = None
 # ckpth = f"/home/domi/ml-training-technique/stored_models/baseline-{epochs_load}-{percent_of_dataset}.ckpt"
 trainer.fit(model, dm, ckpt_path=ckpth)
-trainer.save_checkpoint(
-    filepath=f"/home/domi/ml-training-technique/stored_models/baseline-{max_epochs}-{percent_of_dataset}.ckpt"
-)
+# trainer.save_checkpoint(
+#     filepath=f"/home/domi/ml-training-technique/stored_models/baseline-{max_epochs}-{percent_of_dataset}.ckpt"
+# )

@@ -1,0 +1,15 @@
+{"time":"2024-10-30T16:17:45.876401442+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T16:17:45.876425001+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241030_161745-wrkri4na/logs/debug-core.log"}
+{"time":"2024-10-30T16:17:46.167800809+01:00","level":"INFO","msg":"created new stream","id":"wrkri4na"}
+{"time":"2024-10-30T16:17:46.167841412+01:00","level":"INFO","msg":"stream: started","id":"wrkri4na"}
+{"time":"2024-10-30T16:17:46.167903221+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wrkri4na"}}
+{"time":"2024-10-30T16:17:46.16832793+01:00","level":"INFO","msg":"sender: started","stream_id":"wrkri4na"}
+{"time":"2024-10-30T16:17:46.168332489+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wrkri4na"}}
+{"time":"2024-10-30T16:17:46.172672213+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T16:17:46.89000153+01:00","level":"INFO","msg":"stream: closing","id":"wrkri4na"}
+{"time":"2024-10-30T16:17:46.890025028+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T16:17:46.890809345+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-30T16:17:46.89096845+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wrkri4na"}}
+{"time":"2024-10-30T16:17:46.890982025+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wrkri4na"}}
+{"time":"2024-10-30T16:17:46.890989651+01:00","level":"INFO","msg":"sender: closed","stream_id":"wrkri4na"}
+{"time":"2024-10-30T16:17:46.891062256+01:00","level":"INFO","msg":"stream: closed","id":"wrkri4na"}
