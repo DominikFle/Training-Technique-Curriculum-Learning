@@ -1,0 +1,31 @@
+------------------------------
+Base Learning Rate: 0.01
+--------------------
+Parameter group pg1: 15 parameter tensors
+Weight Decay: Inherit from Global
+Learning Rate: 0.01
+--------------------
+Parameter group pg2: 3 parameter tensors
+Weight Decay: Inherit from Global
+Learning Rate: 0.02
+Epoch 2: 100%|█| 19/19 [00:02<00:00,  6.68it/s, v_num=w8cz, loss=0.177, train-acc=0.917, train-acc-0_step=1.000, train-acc-1_
+Validation DataLoader 0:  60%|████████████████████████████████████▍                        | 187/313 [00:07<00:05, 25.12it/s]
+  | Name                        | Type             | Params | Mode
+-------------------------------------------------------------------------
+0 | layers                      | ModuleList       | 67.4 K | train
+1 | flatten                     | Flatten          | 0      | train
+2 | project_into_classification | Linear           | 125 K  | train
+3 | softmax                     | Softmax          | 0      | train
+4 | loss_criterion              | CrossEntropyLoss | 0      | train
+-------------------------------------------------------------------------
+192 K     Trainable params
+0         Non-trainable params
+192 K     Total params
+0.771     Total estimated model params size (MB)
+23        Modules in train mode
+
+Validation DataLoader 0:  60%|████████████████████████████████████▋                        | 188/313 [00:05<00:03, 35.53it/s]
+/home/domi/miniconda3/envs/ml_technique/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:240: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+`Trainer.fit` stopped: `max_epochs=10` reached.

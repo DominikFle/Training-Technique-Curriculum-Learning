@@ -41,7 +41,6 @@ def create_optimizer_groups(
                     # remove from dont_decay_parameters and from learning_rate_factors
                     dont_decay_parameters.remove(lr_name)
                     learning_rate_factors[learning_rate_factor].remove(lr_name)
-        print("intersection", intersection)
         for name, param in model.named_parameters():
             for learning_rate_factor, lr_names in intersection.items():
                 for lr_name in lr_names:
@@ -104,11 +103,15 @@ def create_optimizer_groups(
         weights_with_decay = []
         weights_without_decay = []
         for name, param in model.named_parameters():
+            name_added = False
             for dont_decay in dont_decay_parameters:
+                if name_added:
+                    break
                 if dont_decay in name:
+                    name_added = True
                     weights_without_decay.append(param)
-                else:
-                    weights_with_decay.append(param)
+            if not name_added:
+                weights_with_decay.append(param)
         params = [
             {"params": weights_with_decay},
             {"params": weights_without_decay, "weight_decay": 0.0},
@@ -116,18 +119,24 @@ def create_optimizer_groups(
     elif learning_rate_factors:
         weights = {}
         for name, param in model.named_parameters():
-            for learning_rate_factor, lr_name in learning_rate_factors.items():
+            name_added = False
+            for learning_rate_factor, lr_names in learning_rate_factors.items():
+                if name_added:
+                    break
                 for lr_name in lr_names:
+                    if name_added:
+                        break
                     if lr_name in name:
+                        name_added = True
                         if not learning_rate_factor in weights:
                             weights[learning_rate_factor] = [param]
                         else:
                             weights[learning_rate_factor].append(param)
-                    else:
-                        if not 1 in weights:
-                            weights[1] = [param]
-                        else:
-                            weights[1].append(param)
+            if not name_added:
+                if not 1 in weights:
+                    weights[1] = [param]
+                else:
+                    weights[1].append(param)
         params = []
         for lr_factor, weights in weights.items():
             params.append({"params": weights, "lr": base_learning_rate * lr_factor})
@@ -139,7 +148,7 @@ def create_optimizer_groups(
         print("Base Learning Rate:", base_learning_rate)
         for i, group in enumerate(params):
             print("-" * 20)
-            print(f"Parameter group {i}: {len(group["params"])} parameter tensors")
+            print(f"Parameter group pg{i+1}: {len(group["params"])} parameter tensors")
             if "weight_decay" in group and group["weight_decay"] == 0.0:
                 print(f"Weight Decay: 0")
             else:

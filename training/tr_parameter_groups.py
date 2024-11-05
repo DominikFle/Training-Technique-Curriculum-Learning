@@ -32,7 +32,7 @@ model = ConvNet(
 )
 lr_monitor = LearningRateMonitor(logging_interval="step")
 print(summary(model, input_size=(batch_size, 1, *MNIST_INFO.img_size)))
-max_epochs = 20
+max_epochs = 10
 trainer = pl.Trainer(
     accelerator="auto",
     devices=1,
@@ -40,6 +40,7 @@ trainer = pl.Trainer(
     check_val_every_n_epoch=1,
     logger=wandb_logger,
     callbacks=[lr_monitor],
+    log_every_n_steps=1,
 )
 epochs_load = 200
 ckpth = None

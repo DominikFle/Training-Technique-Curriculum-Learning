@@ -1,0 +1,15 @@
+{"time":"2024-11-01T01:06:15.424067409+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-01T01:06:15.42408988+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241101_010615-uypaqi05/logs/debug-core.log"}
+{"time":"2024-11-01T01:06:15.774474825+01:00","level":"INFO","msg":"created new stream","id":"uypaqi05"}
+{"time":"2024-11-01T01:06:15.774539773+01:00","level":"INFO","msg":"stream: started","id":"uypaqi05"}
+{"time":"2024-11-01T01:06:15.774613667+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"uypaqi05"}}
+{"time":"2024-11-01T01:06:15.774701382+01:00","level":"INFO","msg":"sender: started","stream_id":"uypaqi05"}
+{"time":"2024-11-01T01:06:15.774712792+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"uypaqi05"}}
+{"time":"2024-11-01T01:06:15.780531583+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-01T01:06:16.451177985+01:00","level":"INFO","msg":"stream: closing","id":"uypaqi05"}
+{"time":"2024-11-01T01:06:16.451218126+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-01T01:06:16.45259366+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-01T01:06:16.453012173+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"uypaqi05"}}
+{"time":"2024-11-01T01:06:16.453039743+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"uypaqi05"}}
+{"time":"2024-11-01T01:06:16.45305373+01:00","level":"INFO","msg":"sender: closed","stream_id":"uypaqi05"}
+{"time":"2024-11-01T01:06:16.453102735+01:00","level":"INFO","msg":"stream: closed","id":"uypaqi05"}

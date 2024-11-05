@@ -9,15 +9,16 @@ Planned is:
 - [Progressive Curriculum Learning: Progressive Dropout](#progressive-curriculum-learning-progressive-dropout)
 - [Progressive Curriculum Learning: Semi Supervised Learning](#progressive-curriculum-learning-semi-supervised-learning)
 - [Learning Rate Scheduling](#learning-rate-scheduling-)
-- [Parameter Groups](#parameter-groups)
-- Random Weight Initialization in Pytorch
-- Data Augmentation
-- Layerwise Learning Rate & Weight Decay
+- [Parameter Groups - Layerwise Learning Rate & Weight Decay](#parameter-groups)
+- [Weight Initialization in Pytorch](#weight-initialization-in-pytorch)
+- [Distillation Intermediate Layer Outputs as Additional Loss](#distillation-intermediate-layer-outputs-as-additional-loss)
 - Supervised Pretraining (Transfer Learning)
 - Self-Supervised Pretraining Masked Image Modeling
 - Self-Supervised Contrastive Learning like MoCo
-- Distillation for Model Regularization comparison of intermediate layer outputs
+
 - Semi-Supervised Learning
+- Data Augmentation
+
 
 #### Base Case
 The base case is a simple `ConvNet` model. The model consists of two convolutional layers followed a linear layer to downproject onto the number of classes. The model is trained for 10 epochs with a batch size of 32 and a learning rate of 0.01. The loss function is the cross-entropy loss. The optimizer is the AdamW optimizer. The model is trained on 10 percent of the training set to be able to easily extend the dataset later. The accuracy is tracked for training and validation.
@@ -63,6 +64,42 @@ schedule = SelfLearningQuantileWeighingCallback(
 # n. epoch : 1.0 unsupervised data
 ```
 #### Learning Rate Scheduling
-**Varying Learning Rate over the Training** In many cases it might be beneficial to use varying learning rate over the training process. This can also be interpreted as curriculum learning. For example to achieve robust training of transformers oftentimes warmup followed by cosine learning rate is used.
+**Varying Learning Rate over the Training Epochs** In many cases it might be beneficial to use varying learning rate over the training process. This can also be interpreted as curriculum learning. For example to achieve robust training of transformers oftentimes warmup followed by cosine learning rate is used.
 #### Parameter Groups
-**Varying Learning Rate and Regularization over the Layers** In many cases it might be beneficial to use varying learning rate and regularization over the layers of the model. For example to achieve robust training of transformers sometimes layerwise learning rate is used. Typically embeddings are not weight regularized.
+**Varying Learning Rate and Regularization withing the Layers** In many cases it might be beneficial to use varying learning rate and regularization over the layers of the model. For example to achieve robust training of transformers sometimes layerwise learning rate is used. Typically embeddings are not weight regularized. The partioning into parameter groups is done via the [create_optimizer_groups](technique_abstractions/create_optimizer_groups.py) function. It takes in a list of parameter names to exclude from weight decay as well as a dict of parameter names with the respective learning rate. 
+```python
+    
+    param_groups = create_optimizer_groups(
+        model,
+        base_learning_rate=0.01,
+        dont_decay_parameters=["project_into_classification", "layers.0"], # will not weight project_into_classification.weight and project_into_classification.bias
+        learning_rate_factors={
+            2: ["project_into_classification", "layers.2.skip.weight"],
+        },
+        verbose=True,
+    )
+    # Output Param Groups:
+    # Learning Rate: 0.01
+    # --------------------
+    # Parameter group pg2: 1 parameter tensors
+    # Weight Decay: Inherit from Global
+    # Learning Rate: 0.02
+    # --------------------
+    # Parameter group pg3: 2 parameter tensors
+    # Weight Decay: 0
+    # Learning Rate: 0.02
+    # --------------------
+    # Parameter group pg4: 8 parameter tensors
+    # Weight Decay: 0
+    # Learning Rate: 0.01
+
+    # Use the param_groups to configure the optimizer 
+    optimizer = torch.optim.AdamW(
+            param_groups, lr=0.01, weight_decay=0.01
+        )
+```
+#### Weight Initialization in Pytorch
+TODO
+#### Distillation Intermediate Layer Outputs as Additional Loss
+TODO 
+https://arxiv.org/pdf/1503.02531
