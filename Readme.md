@@ -1,8 +1,9 @@
 ### ML Training Techniques
 This project summarizes different building blocks of ML training techniques to stabilize and speed up training of deep neural networks. The focus is on the training process itself, not on the model architecture. The goal is to provide a comprehensive overview of the most important techniques and to give a guideline for the practical use of these techniques.
 Not considered are model changes, like changing the model architecture or the type of loss function.
-The techniques are shown using the MNIST dataset and a simple CNN model. The code is written in Pytorch.
-Every Technique is showcased using its own training script
+The techniques are shown using the MNIST dataset and a simple CNN model with chapter based differences. The code is written in PyTorch.
+Every Technique is showcased using its own training script.
+
 Planned is:
 - [Base Case](#base-case)
 - [Weighted Data Sampling](#weighted-data-sampling)
@@ -38,8 +39,8 @@ In this implementation the dropout change can be implemented in the training scr
 def linear_dropout(
     epoch: int,
     dropout_mem: dict[int, list[int]],
-    start_dropout=0.05,
-    end_dropout=1,
+    start_dropout=0.0,
+    end_dropout=0.5,
     end_epoch=2,
 ):
 
@@ -49,6 +50,8 @@ def linear_dropout(
             end_dropout,
         )
 ```
+<img src="imgs/dropout.png">
+
 #### Semi Supervised Self-Learning (Curriculum Learning)
  Self Learning is a form of [Semi Supervised Learning](https://arxiv.org/pdf/2101.10382). In Self Learning the model is initialized by training on the labeled data first. Afterwards unlabeled examples are added to the dataset where the label is the prediction of the model. The implementation here follows the approach of the paper [Curriculum Labeling: Revisiting Pseudo-Labeling for Semi-Supervised Learning](https://cdn.aaai.org/ojs/16852/16852-13-20346-1-2-20210518.pdf). The main idea is to use a curriculum to add increasingly more and harder examples from the unsupervised subset into the training set. The unsupervised examples are chosen by a increasing confidence quantile of the predictions of the model. In practice the quantile is linearly increased from 0 to 1 from a start epoch to the end epoch. The training script is `tr_self_learning_cl.py`[🔗](training/tr_self_learning_cl.py). The Curriculum is implemented as custom Callback in pytorch lightning (see [here](training_callbacks/SelfLearningQuantileWeighingCallback.py)). The Schedule is than used as 
 ```python
@@ -63,6 +66,8 @@ schedule = SelfLearningQuantileWeighingCallback(
 # 5. epoch : 1.0 unsupervised data
 # n. epoch : 1.0 unsupervised data
 ```
+<img src="imgs/self_learning.png">
+
 #### Learning Rate Scheduling
 **Varying Learning Rate over the Training Epochs** In many cases it might be beneficial to use varying learning rate over the training process. This can also be interpreted as curriculum learning. For example to achieve robust training of transformers oftentimes warmup followed by cosine learning rate is used.
 #### Parameter Groups
@@ -98,6 +103,8 @@ schedule = SelfLearningQuantileWeighingCallback(
             param_groups, lr=0.01, weight_decay=0.01
         )
 ```
+<img src="imgs/param_groups_and_schedule.png">
+
 #### Weight Initialization in Pytorch
 TODO
 #### Distillation Intermediate Layer Outputs as Additional Loss
