@@ -13,7 +13,7 @@ class IntermediateLayerExtractor:
         """
         super().__init__()
         self.model: nn.Module | None = model
-        self.__layer_names = layer_names
+        self.layer_names = layer_names
         self.__recordings = []
         self.__hooks = {}
         self.__device = None
@@ -35,7 +35,7 @@ class IntermediateLayerExtractor:
 
     def __register_hook(self):
         for name, module in self.model.named_modules():
-            if name in self.__layer_names:
+            if name in self.layer_names:
                 if self.verbose:
                     print("Registered", name)
                 self.__hooks[name] = module.register_forward_hook(self.__hook)

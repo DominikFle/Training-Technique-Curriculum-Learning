@@ -1,0 +1,15 @@
+{"time":"2024-11-06T22:13:43.386884979+01:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-06T22:13:43.386985601+01:00","level":"INFO","msg":"created symlink","path":"wandb/offline-run-20241106_221343-tuu6m8bi/logs/debug-core.log"}
+{"time":"2024-11-06T22:13:43.91809281+01:00","level":"INFO","msg":"created new stream","id":"tuu6m8bi"}
+{"time":"2024-11-06T22:13:43.918142685+01:00","level":"INFO","msg":"stream: started","id":"tuu6m8bi"}
+{"time":"2024-11-06T22:13:43.91826801+01:00","level":"INFO","msg":"sender: started","stream_id":"tuu6m8bi"}
+{"time":"2024-11-06T22:13:43.91817945+01:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tuu6m8bi"}}
+{"time":"2024-11-06T22:13:43.918195428+01:00","level":"INFO","msg":"handler: started","stream_id":{"value":"tuu6m8bi"}}
+{"time":"2024-11-06T22:13:43.924134655+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-06T22:14:20.590532309+01:00","level":"INFO","msg":"stream: closing","id":"tuu6m8bi"}
+{"time":"2024-11-06T22:14:20.590568046+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-06T22:14:20.591200591+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-06T22:14:20.591997819+01:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"tuu6m8bi"}}
+{"time":"2024-11-06T22:14:20.59202576+01:00","level":"INFO","msg":"sender: closed","stream_id":"tuu6m8bi"}
+{"time":"2024-11-06T22:14:20.592021671+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"tuu6m8bi"}}
+{"time":"2024-11-06T22:14:20.592157754+01:00","level":"INFO","msg":"stream: closed","id":"tuu6m8bi"}

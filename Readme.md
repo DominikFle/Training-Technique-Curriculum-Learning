@@ -109,3 +109,23 @@ schedule = SelfLearningQuantileWeighingCallback(
 TODO
 #### Distillation Intermediate Layer Outputs as Additional Loss with Curriculum Loss Weighting
 The [Similarity Preservation Loss](https://arxiv.org/pdf/1907.09682) is used picked as example. Distillation of intermediate layers is used to stabilize and improve training using a teacher model. The loss weight is set with a curriculum schedule. The training script is `tr_distillation.py`[🔗](training/tr_distillation.py).
+The curriculum is implemented as custom Callback in pytorch lightning that can be used as 
+```python
+distillation_weight_schedule = GenericAttributeLinearSchedule(
+    attribute_name="distillation_weight",
+    start_epoch=5,
+    end_epoch=10,
+    start_val=1,
+    end_val=0.5,
+    log=True,
+)
+classification_weight_schedule = GenericAttributeLinearSchedule(
+    attribute_name="classification_weight",
+    start_epoch=5,
+    end_epoch=10,
+    start_val=0.5,
+    end_val=1,
+    log=True,
+)
+```
+<img src="imgs/distillation_curriculum_loss_weights.png" width = "500px">
