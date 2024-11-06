@@ -1,4 +1,5 @@
-### ML Training Techniques
+## Generalized Training Techniques for Deep Neural Networks with a Focus on Curriculum Learning
+
 This project summarizes different building blocks of ML training techniques to stabilize, speed up and improve training of deep neural networks. The focus is on the training process itself, not on the model architecture. A particular focus is on Curriculum Learning (CL) and its different forms. Curriculum Learning is a training strategy that aims to improve the training process by changing the training data, the model or the loss function over time.
 The focus lies on techniques that can be easily abstracted to other models and datasets. The techniques are shown using the MNIST dataset and a simple CNN model with chapter based differences. The code is written in PyTorch.
 Every Technique is showcased using its own training script.
