@@ -107,6 +107,5 @@ schedule = SelfLearningQuantileWeighingCallback(
 
 #### Weight Initialization in Pytorch
 TODO
-#### Distillation Intermediate Layer Outputs as Additional Loss
-TODO 
-https://arxiv.org/pdf/1503.02531
+#### Distillation Intermediate Layer Outputs as Additional Loss with Curriculum Loss Weighting
+The [Similarity Preservation Loss](https://arxiv.org/pdf/1907.09682) is used picked as example. Distillation of intermediate layers is used to stabilize and improve training using a teacher model. The loss weight is set with a curriculum schedule. The training script is `tr_distillation.py`[🔗](training/tr_distillation.py).
