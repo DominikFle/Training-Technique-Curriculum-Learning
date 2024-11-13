@@ -13,7 +13,7 @@ ToC:
 - [Parameter Groups - Layerwise Learning Rate & Weight Decay](#parameter-groups)
 - [Weight Initialization in Pytorch](#weight-initialization-in-pytorch)
 - [Distillation of Intermediate Layer Outputs as additional Similarity Preservation Loss with Curriculum Loss Weighting](#distillation-of-intermediate-layer-outputs-as-additional-similarity-preservation-loss-with-curriculum-loss-weighting)
-- Self-Supervised Pretraining Masked Image Modeling
+- TokenFormer - Progressive Horizontal Model Scaling
 - Self-Supervised Contrastive Learning like MoCo
 - Data Augmentation
 
@@ -125,3 +125,7 @@ classification_weight_schedule = GenericAttributeLinearSchedule(
 )
 ```
 <img src="imgs/distillation_curriculum_loss_weights.png" width = "500px">
+
+### TokenFormer - Progressive Horizontal Model Scaling
+TODO
+https://github.com/Haiyang-W/TokenFormer
