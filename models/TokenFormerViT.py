@@ -31,6 +31,7 @@ class FeedForward(nn.Module):
         return self.net(x)
 
 
+# TODO Test this module
 class Pattention(nn.Module):
     def __init__(self, input_dim, output_dim, param_token_nums):
         """
@@ -72,6 +73,7 @@ class Pattention(nn.Module):
         return out
 
 
+# TODO this needs implementation
 # From Tokenformer paper
 class TokenFormerAttention(nn.Module):
     def __init__(self, dim, heads=8, dim_head=64, dropout=0.0):
